@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>io.github.hundanli</groupId>
-		<artifactId>grpc-nacos-service</artifactId>
-		<version>1.0</version>
-	</parent>
-	<artifactId>grpc-server</artifactId>
-	<version>1.0</version>
-	<name>grpc-server</name>
-	<description>Demo project for Spring Boot</description>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>io.github.hundanli</groupId>
+        <artifactId>grpc-nacos-service</artifactId>
+        <version>1.0</version>
+    </parent>
+    <artifactId>grpc-server</artifactId>
+    <version>1.0</version>
+    <name>grpc-server</name>
+    <description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>8</java.version>
-	</properties>
+    <properties>
+        <java.version>8</java.version>
+    </properties>
 
-	<dependencies>
-		<!--grpc-server依赖-->
-		<dependency>
-			<groupId>net.devh</groupId>
-			<artifactId>grpc-server-spring-boot-starter</artifactId>
-			<version>2.10.1.RELEASE</version>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <!--grpc-server依赖-->
+        <dependency>
+            <groupId>net.devh</groupId>
+            <artifactId>grpc-server-spring-boot-starter</artifactId>
+            <version>2.10.1.RELEASE</version>
+        </dependency>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
+        <!--nacos discovery-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

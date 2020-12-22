@@ -1,0 +1,18 @@
+server:
+  port: 7070
+
+grpc:
+  client:
+    GLOBAL:
+      negotiation-type: plaintext
+      enable-keep-alive: true
+      keep-alive-without-calls: true
+
+spring:
+  application:
+    name: greeter-grpc-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        enabled: true
